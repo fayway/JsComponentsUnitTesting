@@ -1,5 +1,3 @@
-import App from './components/environment/App';
+import App from './js/components/environment/App';
 
 App.bootstrap();
-
-console.log('App bootstraped!');

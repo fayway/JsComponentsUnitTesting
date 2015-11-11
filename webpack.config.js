@@ -1,7 +1,6 @@
 module.exports = {
-    entry: __dirname + '/app/main.js',
+    entry: './app/main.js',
     output: {
-        path: __dirname + '/build',
         filename: 'bundle.js'
     },
     debug: true,
@@ -12,7 +11,7 @@ module.exports = {
             test: /\.js$/,
             include: /(app)|(test)/,
             //exclude: /node_modules/,
-            loader: 'babel-loader',
+            loader: 'babel',
             query: {
                 presets: ['es2015']
             }

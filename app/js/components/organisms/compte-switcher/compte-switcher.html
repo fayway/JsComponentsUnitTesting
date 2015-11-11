@@ -1,0 +1,16 @@
+<div>
+    <img src="{{compteCourant.photo}}" class="app-avatar" role="active-account-photo">
+    <div class="app-avatar-dropdown">
+        <span role="active-account-name">{{#if compteCourant }}{{compteCourant.getFullName()}}{{/if}}</span>
+        <div class="mdl-layout-spacer"></div>
+        <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">arrow_drop_down</i>
+            <span class="visuallyhidden">Accounts</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+            {{#comptes}}
+            <li on-click="switchCompte(event, this)" class="mdl-menu__item" role="account" data-login="{{login}}">{{this.getFullName()}}</li>
+            {{/comptes}}
+        </ul>
+    </div>
+</div>
