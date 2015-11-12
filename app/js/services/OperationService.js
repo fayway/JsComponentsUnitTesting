@@ -15,12 +15,12 @@ export default {
     },
     getPendingOperations: function () {
         return new Promise(function (fulfill, reject) {
-            this.getOperations().then(function (operations) {
+            this.getOperations().then( (operations) => {
                 var pending = operations.filter(function (operation) {
                     return 'Pending' === operation.statut;
                 });
                 fulfill(pending);
             }, reject);
-        }.bind(this));
+        });
     }
 }

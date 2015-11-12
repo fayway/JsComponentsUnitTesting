@@ -7,7 +7,7 @@ export default {
         return new Promise(function (fulfill, reject) {
             $.ajax('/server/comptes.json', {
                 method: 'GET'
-            }).then(function (json) {
+            }).then( (json) => {
                 var comptes = ObjectUtils.mapJsonToObjects(json, Compte);
                 fulfill(comptes);
             }, reject);
