@@ -4,11 +4,12 @@ import Header from '../ecosystems/Header';
 import NavigationDrawer from '../ecosystems/NavigationDrawer';
 import MainSection from '../ecosystems/MainSection';
 
+Ractive.DEBUG = false;
 Ractive.decorators.mdl = mdlDecorator;
 
 export default {
     bootstrap: function (el='body') {
-        const ractive = new Ractive({
+        new Ractive({
             el: el,
             components: {
                 'demo-header': Header,
@@ -21,7 +22,7 @@ export default {
                 }.bind(this));
             },
             template: `
-                <div class="app-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+                <div class="app app-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
                     <demo-header />
                     <demo-drawer />
                     <demo-main salaries="{{salaries}}" keyword="{{keyword}}" />

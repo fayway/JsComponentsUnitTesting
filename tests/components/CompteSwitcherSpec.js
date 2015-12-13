@@ -1,0 +1,100 @@
+const expect = require('chai').expect;
+const $ = require('jquery');
+const Ractive = require('ractive');
+const getContainerFixture = require('../setup/utils').getContainerFixture;
+import CompteSwitcher from '../../app/js/components/organisms/compte-switcher/CompteSwitcher';
+import Compte from '../../app/js/models/Compte';
+
+
+describe('CompteSwitcher Component', function () {
+
+    var fixture;
+
+    before(() => {
+        fixture = getContainerFixture(document);
+    });
+
+    after(() => {
+        fixture.innerHTML = '';
+    });
+
+    it('Doit être invocable sans erreur', function (done) {
+
+        var component = new CompteSwitcher();
+
+        expect(component).to.not.null;
+        expect(component instanceof Ractive).to.be.true;
+        expect(component.toHTML()).to.exist;
+
+        done();
+    });
+
+    it('Doit rendre correctement le sélecteur des comptes', function (done) {
+
+        var homer = new Compte(1, 'M', 'Homer', 'Simpson', '/images/homer.png', 'hsmipson', 'father', true );
+        var marge = new Compte(2, 'Mme', 'Marge', 'Simpson', '/images/marge.png', 'msmipson', 'mother' );
+        var bart = new Compte(3, 'M', 'Bart', 'Simpson', '/images/bart.png', 'bsimpson', 'son' );
+        var lisa = new Compte(4, 'M', 'Lisa', 'Simpson', '/images/lisa.png', 'lsimpson', 'daughter' );
+        var simpsons = [homer , marge, bart, lisa];
+
+        var component = new CompteSwitcher({
+            data: {
+                comptes: simpsons
+            }
+        });
+
+        var $html = $(component.toHTML());
+        //
+        ////Test Default Account
+        var defaultName = $html.find('[role="active-account-name"]').text();
+        var defaultPhoto = $html.find('[role="active-account-photo"]').attr('src');
+
+        expect(defaultName).to.contain(homer.firstname);
+        expect(defaultName).to.contain(homer.lastname);
+        expect(defaultPhoto).to.equal(homer.photo);
+
+        ////Test other Accounts
+        var $accounts = $html.find('li[role=account]');
+        expect($accounts.length).to.equal(simpsons.length);
+
+        expect($accounts.eq(0).text()).to.contain(homer.firstname);
+        expect($accounts.eq(1).text()).to.contain(marge.firstname);
+        expect($accounts.eq(2).text()).to.contain(bart.firstname);
+        expect($accounts.eq(3).text()).to.contain(lisa.firstname);
+
+        done();
+    });
+
+
+    it('Doit switcher le compte apres click', function (done) {
+
+        var homer = new Compte(1, 'M', 'Homer', 'Simpson', '/images/homer.png', 'homer', 'father', true );
+        var marge = new Compte(2, 'Mme', 'Marge', 'Simpson', '/images/marge.png', 'marge', 'mother' );
+        var bart = new Compte(3, 'M', 'Bart', 'Simpson', '/images/bart.png', 'bart', 'son' );
+        var lisa = new Compte(4, 'M', 'Lisa', 'Simpson', '/images/lisa.png', 'lisa', 'daughter' );
+
+        var simpsons = [homer , marge, bart, lisa];
+
+        var ractive = new Ractive({
+            el: fixture,
+            template: '<compte-switcher />',
+            data: {
+                comptes: simpsons
+            },
+            components: {
+                'compte-switcher': CompteSwitcher
+            }
+        });
+
+        $('[data-login=marge]').click();
+        expect($('[role=active-account-name]').text()).to.contain(marge.firstname);
+        expect($('[role=active-account-photo]').attr('src')).to.contain(marge.photo);
+
+        $('[data-login=bart]').click();
+        expect($('[role=active-account-name]').text()).to.contain(bart.firstname);
+        expect($('[role=active-account-photo]').attr('src')).to.contain(bart.photo);
+
+        done();
+    });
+
+});

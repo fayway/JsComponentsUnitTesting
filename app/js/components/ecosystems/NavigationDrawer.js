@@ -10,7 +10,7 @@ export default Ractive.extend({
         'vertical-menu': VerticalMenu
     },
     oninit: function () {
-        OperationService.getPendingOperations().then( (operations) => {
+        OperationService.getPendingOperations().then((operations) => {
             this.set('operationPendingCount', operations.length);
         });
         CompteService.getComptes().then((comptes) => {

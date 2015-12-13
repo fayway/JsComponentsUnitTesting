@@ -43,7 +43,7 @@ export default Ractive.extend({
             //
             showProgress();
 
-            VirementService.postVirement(salarieId, montantVirement).then( () => {
+            VirementService.postVirement(salarieId, montantVirement).then(() => {
                 this.subtract('salaries.' + salarieIndex + '.balance', montantVirement);
                 if (callback) {
                     callback();
