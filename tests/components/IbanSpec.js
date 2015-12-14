@@ -5,7 +5,7 @@ const getContainerFixture = require('../setup/utils').getContainerFixture;
 import Iban from '../../app/js/components/atoms/Iban';
 
 
-describe('Iban Component', () => {
+describe('IBAN Component', () => {
 
     var fixture;
 
@@ -29,7 +29,7 @@ describe('Iban Component', () => {
 
     });
 
-    it('Doit savoir parser un iban', function (done) {
+    it('Doit savoir parser un IBAN', function (done) {
 
         var component = new Iban();
 
@@ -46,7 +46,7 @@ describe('Iban Component', () => {
         done();
     });
 
-    it('Doit formatter correctement un iban sous forme d\'un tableau', function (done) {
+    it("Doit formatter correctement un IBAN sous forme d'un tableau", function (done) {
 
         var component = new Iban({
             data: {
@@ -85,7 +85,7 @@ describe('Iban Component', () => {
         done();
     });
 
-    it('Doit afficher correctement chaque partie du l\'iban ', (done) => {
+    it("Doit afficher correctement chaque partie du l'IBAN", (done) => {
 
         let sut = new Iban({
             el: fixture,

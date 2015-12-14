@@ -9,7 +9,7 @@ Ractive.decorators.mdl = mdlDecorator;
 
 export default {
     bootstrap: function (el='body') {
-        new Ractive({
+        var ractive = new Ractive({
             el: el,
             components: {
                 'demo-header': Header,
@@ -29,6 +29,8 @@ export default {
                 </div>
             `
         });
+
+        return ractive;
     }
 }
 

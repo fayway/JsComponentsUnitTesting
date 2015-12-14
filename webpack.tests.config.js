@@ -16,6 +16,9 @@ module.exports = {
             query: {
                 presets: ['es2015']
             }
+        }, {
+            test: /sinon\.js$/,
+            loader: "imports?define=>false,require=>false"
         }]
     },
     devServer: {

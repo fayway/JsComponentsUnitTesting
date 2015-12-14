@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline",
     "build": "webpack -p",
-    "test": "",
+    "test": "mocha tests/slides/",
     "devtest": "webpack-dev-server --config webpack.tests.config.js"
   },
   "author": "fayway@gmail.com",
@@ -19,11 +19,13 @@
     "babel-register": "^6.3.13",
     "chai": "^3.4.1",
     "cheerio": "^0.19.0",
+    "imports-loader": "^0.6.5",
     "istanbul": "^0.4.1",
     "jquery": "*",
     "jsdom": "^7.2.1",
     "material-design-lite": "*",
     "mocha": "^2.3.4",
+    "mocha-sinon": "^1.1.4",
     "ractive": "*",
     "sinon": "^1.17.2",
     "webpack": "^1.12.9",

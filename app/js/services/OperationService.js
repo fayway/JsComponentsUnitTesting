@@ -4,7 +4,7 @@ import ObjectUtils from '../utils/ObjectUtils';
 
 export default {
     getOperations: function () {
-        return new Promise(function (fulfill, reject) {
+        return new Promise((fulfill, reject) => {
             $.ajax('/server/operations.json', {
                 method: 'GET'
             }).then(function (json) {
@@ -14,8 +14,8 @@ export default {
         });
     },
     getPendingOperations: function () {
-        return new Promise(function (fulfill, reject) {
-            this.getOperations().then( (operations) => {
+        return new Promise((fulfill, reject) => {
+            this.getOperations().then((operations) => {
                 var pending = operations.filter(function (operation) {
                     return 'Pending' === operation.statut;
                 });

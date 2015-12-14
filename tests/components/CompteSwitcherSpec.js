@@ -29,7 +29,7 @@ describe('CompteSwitcher Component', function () {
         done();
     });
 
-    it('Doit rendre correctement le sélecteur des comptes', function (done) {
+    it('Doit afficher correctement le sélecteur des comptes', function (done) {
 
         var homer = new Compte(1, 'M', 'Homer', 'Simpson', '/images/homer.png', 'hsmipson', 'father', true );
         var marge = new Compte(2, 'Mme', 'Marge', 'Simpson', '/images/marge.png', 'msmipson', 'mother' );
@@ -66,7 +66,7 @@ describe('CompteSwitcher Component', function () {
     });
 
 
-    it('Doit switcher le compte apres click', function (done) {
+    it('Doit switcher le compte après les clicks', function (done) {
 
         var homer = new Compte(1, 'M', 'Homer', 'Simpson', '/images/homer.png', 'homer', 'father', true );
         var marge = new Compte(2, 'Mme', 'Marge', 'Simpson', '/images/marge.png', 'marge', 'mother' );

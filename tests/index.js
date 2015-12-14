@@ -1,5 +1,9 @@
-//require('./sandbox/tests.js');
-//require('./slides/PureComponents.js');
-require('./components/AppSpec.js');
-//require('./components/IbanSpec.js');
-//require('./components/CompteSwitcherSpec.js');
+//require('./sandbox/tests');
+require('./slides/PureComponents');
+require('./components/AppSpec');
+require('./components/IbanSpec');
+require('./components/SalarieCardSpec');
+require('./components/CompteSwitcherSpec');
+require('./components/SearchFilterSpec');
+require('./components/VirementBoxSpec');
+require('./components/MainSectionSpec');

@@ -26,4 +26,14 @@ describe('App', function () {
         done();
     });
 
+    it('Doit embarquer les composants ecosystems', function (done) {
+        var ractive = App.bootstrap({container: fixture});
+
+        expect(ractive.findComponent('demo-header')).to.exists;
+        expect(ractive.findComponent('demo-drawer')).to.exists;
+        expect(ractive.findComponent('demo-main')).to.exists;
+
+        done();
+    });
+
 });
