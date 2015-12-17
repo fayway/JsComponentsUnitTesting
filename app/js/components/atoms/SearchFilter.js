@@ -7,7 +7,7 @@ export default Ractive.extend({
     },
     template: `
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-            <label  class="mdl-button mdl-js-button mdl-button--icon" for="search">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
                 <i class="material-icons">search</i>
             </label>
             <div class="mdl-textfield__expandable-holder">
