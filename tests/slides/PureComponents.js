@@ -26,7 +26,7 @@ describe('Testing State', () => {
 
     });
 
-    it('Doit proposer de renseigner l\'email si il est manquant', function (done) {
+    it("Doit proposer de renseigner l'email si il est manquant", function (done) {
 
         component.set('user', {
             nom: 'Homer'
@@ -42,7 +42,7 @@ describe('Testing State', () => {
 
     });
 
-    it('Ne doit pas proposer de renseigner l\'email si il n\'est pas manquant', function (done) {
+    it("Ne doit pas proposer de renseigner l'email si il n'est pas manquant", function (done) {
 
         component.set('user', {
             nom: 'Marge',

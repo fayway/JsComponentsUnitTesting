@@ -36,7 +36,7 @@ describe('Testing State/Behavior inside jsdom', function () {
         }
     });
 
-    it('Doit proposer de renseigner l\'email si il est manquant', function (done) {
+    it("Doit proposer de renseigner l'email si il est manquant", function (done) {
 
         var SUT = Ractive.extend({
             el: fixture,
