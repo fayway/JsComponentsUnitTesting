@@ -1,26 +1,69 @@
-#Launch App
+# Slides
+
+[http://fayway.github.io/ComponentsTesting/](http://fayway.github.io/ComponentsTesting/)
+
+[Blog Post (Fr)](ToDo)
+
+# Demo
+
+## Prerequisites
+
+- Install Node 4
+
+- Clone this repo
+
+- Install dependencies
+
+```
+cd project-folder
+```
+
+```
+npm install
+```
+
+## Internal server (with LiveReload)
+
 ```
 npm run dev
 ```
 
-#Launch Tests
+Navigate to `http://localhost:8080/`
+
+
+# Tests
+
+## Running CLI test
+
+```
+npm test
+```
+
+It executes tests listed in directory `tests/slides/`
+
+
+## Browser tests
+
+Launch
 ```
 npm run devtest
 ```
 
-#Webpack Recap
+And navigate to `http://localhost:8080/test`
 
-##Installing Webpack
+# Webpack Recap
+
+## Installing Webpack
 ```
 npm install webpack -g
 ```
 
-##Run Webpack with watch mode enabled
+## Run Webpack with watch mode enabled
 ```
 webpack --watch
 ```
 
-##Webpack Dev Server
+## Webpack Dev Server
 Webpack has a web server called webpack-dev-server. From the command line, install webpack-dev-server globally:
 
 ```
@@ -38,6 +81,3 @@ To enable hot-loading and remove the App Ready status bar at the top, terminate 
 ```
 webpack-dev-server --inline
 ```
-
-#Sources
-1- https://medium.com/@dabit3/beginner-s-guide-to-webpack-b1f1a3638460

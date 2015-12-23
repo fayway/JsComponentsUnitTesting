@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "keywords": "javascript, es6, webpack, ractive, materialdesign, mocha, chai, sinon, unit test, test doubles",
   "scripts": {
     "dev": "webpack-dev-server --inline",
     "build": "webpack -p",
