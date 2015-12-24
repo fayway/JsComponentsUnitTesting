@@ -47,35 +47,35 @@ Vous pouvez accéder au code source de démosntartion via ce repo GitHub, cette 
 
 - EcmaScript 6: Le code source est écrit avec la nouvelle version de JavaScript 2015
 - Webpack: Le nouveau bundler qui écrase la concurrence (Gulp, Grunt, Browserfy...) grâce à qui le code ES6 est transpilé en ES5 (sans parler du serveur local qu’il embarque, le hot reload,...)
-- Ractive: Une librairie aussi performante que React pour faire des vue (doté de data-binding, gestion de cycle de vie, système d'évènement...) avec une courbe d'apprentissage bien plus courte qu'un framework full-stack comme Angular
+- Ractive.js: Une librairie aussi performante que React pour faire des vue (doté de data-binding, gestion de cycle de vie, système d'évènement...) avec une courbe d'apprentissage bien plus courte qu'un framework full-stack comme Angular
 - Mocha: Test runner qui supporte l'approche TDD/BDD
 - Chai: Librairie d'assertion
-- Sinon: Librairie pour construire les doublures de tests
+- Sinon.JS: Librairie pour construire les doublures de tests
 - jsdom: Pour faker un DOM en JavaScript et pouvoir tester nos composants JS en console (sans browser)
 
 La procédure d'installation :
-- Readme/md
+- [Readme/md](https://github.com/fayway/JsComponentsUnitTesting/blob/master/Readme.md)
 
 Un exemple de tests simples d'état:
-- tests/slides/PureComponents.js
+- [tests/slides/PureComponents.js](https://github.com/fayway/JsComponentsUnitTesting/blob/master/tests/slides/PureComponents.js)
 
 Un exemple de tests de composant avec un fake DOM via jsdom :
-- tests/slides/PureComponents.js
+- [tests/slides/JsdomComponents.js](https://github.com/fayway/JsComponentsUnitTesting/blob/master/tests/slides/JsdomComponents.js)
 
 Un exemple de tests d'état (Le HTML attendu) et test du bon comportement après des clicks:
-- tests/components/CompteSwitcherSpec.js
+- [tests/components/CompteSwitcherSpec.js](https://github.com/fayway/JsComponentsUnitTesting/blob/master/tests/components/CompteSwitcherSpec.js)
 
 Un exemple de test avec doublure de type Espion d'une Dépendance :
-- tests/slides/components/MainSectionSpec.js
+- [tests/slides/components/MainSectionSpec.js](https://github.com/fayway/JsComponentsUnitTesting/blob/master/tests/components/MainSectionSpec.js)
 
 Si vous l’avez raté, la ligne la plus importante:
 
 `expect(VirementService.postVirement.withArgs(1, 300).calledOnce, "Le service VirementService.postVirement n'a pas été appelé avec les bons arguments").to.be.true;`
 
-N’hésiter pas de parcourir l’ensemble des scénarios de tests en installant et lançant d’abord le serveur local des tests via
+N’hésitez pas de parcourir l’ensemble des scénarios de tests en installant et lançant d’abord le serveur local des tests via
 
 `npm install`
 
 `npm run devtest`
 
-Plus sur le Readme.md
+Plus sur de détail dans le [Readme.md](https://github.com/fayway/JsComponentsUnitTesting/blob/master/Readme.md)
