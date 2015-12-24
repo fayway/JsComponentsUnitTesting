@@ -1,17 +1,22 @@
-# Slides
+# Introduction
 
-[http://fayway.github.io/ComponentsTesting/](http://fayway.github.io/ComponentsTesting/)
+Demo App for the talk [http://fayway.github.io/ComponentsTesting/](http://fayway.github.io/ComponentsTesting/)
 
-[Blog Post (Fr)](ToDo)
+## Keywords
 
-# Demo
+- [ES6](http://es6-features.org/)
+- [Webpack](http://webpack.github.io/)
+- [Ractive.js](http://www.ractivejs.org/)
+- [Mocha](http://mochajs.org/)
+- [Sinon.JS](http://sinonjs.org/)
+- [Chai](http://chaijs.com/)
+- [jsdom](https://github.com/tmpvar/jsdom)
+- [Material Design Lite](http://www.getmdl.io/)
 
-## Prerequisites
+## Installation Prerequisites
 
 - Install Node 4
-
 - Clone this repo
-
 - Install dependencies
 
 ```
@@ -30,7 +35,6 @@ npm run dev
 
 Navigate to `http://localhost:8080/`
 
-
 # Tests
 
 ## Running CLI test
@@ -39,8 +43,7 @@ Navigate to `http://localhost:8080/`
 npm test
 ```
 
-It executes tests listed in directory `tests/slides/`
-
+It will execute tests listed in directory `tests/slides/`
 
 ## Browser tests
 
