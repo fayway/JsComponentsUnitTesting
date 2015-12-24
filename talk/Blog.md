@@ -43,7 +43,7 @@ Et avant de présenter comment tester les Composants, il faut d’abord rappeler
 
 Un autre rappelle que même doté des tous outils les plus puissants qu’on peut avoir, si le Design pour la Testabilité n’a pas été pris au sérieux, alors ces outils ne vont pratiquement servir à rien.
 
-Vous pouvez accéder au code source de démosntartion via ce repo GitHub, cette application type utilise les technologies suivantes :
+Vous pouvez accéder au code source de démosntartion via ce [repo GitHub](https://github.com/fayway/JsComponentsUnitTesting), cette application type utilise les technologies suivantes :
 
 - EcmaScript 6: Le code source est écrit avec la nouvelle version de JavaScript 2015
 - Webpack: Le nouveau bundler qui écrase la concurrence (Gulp, Grunt, Browserfy...) grâce à qui le code ES6 est transpilé en ES5 (sans parler du serveur local qu’il embarque, le hot reload,...)
