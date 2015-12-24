@@ -75,6 +75,7 @@ Si vous l’avez raté, la ligne la plus importante:
 N’hésiter pas de parcourir l’ensemble des scénarios de tests en installant et lançant d’abord le serveur local des tests via
 
 `npm install`
+
 `npm run devtest`
 
 Plus sur le Readme.md
